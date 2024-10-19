@@ -1,6 +1,3 @@
-Análisis de Macrodatos - Configurar Docker 
-
-
 ### Cargar Imágenes
 
 Abrir la terminal en la carpeta donde se encuentren las imágenes
@@ -52,17 +49,17 @@ docker run --init --detach --name jupyter-pyspark --network=hadoop-net -p 8888:8
 ### Comandos Docker
 
 Iniciar Contenedores
-```
+``` docker
 docker start namenode resourcemanager jupyter-pyspark dnnm1 dnnm2 dnnm3
 ```
 
 Detener Contenedores
 ``` docker
-docker stop dnnm1 dnnm2 dnnm3 jupyter-pyspark resourcemanager namenode
+docker stop dnnm3 dnnm2 dnnm1 jupyter-pyspark resourcemanager namenode
 ```
 
 Para entrar a la terminal del name node y ejecutar comandos.
-```
+``` docker
 docker exec -it namenode /bin/bash
 ```
 
